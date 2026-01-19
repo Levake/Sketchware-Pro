@@ -36,12 +36,12 @@ public class CollectErrorActivity extends BaseAppCompatActivity {
 
             var dialog = new MaterialAlertDialogBuilder(this)
                     .setTitle(R.string.common_error_an_error_occurred)
-                    .setMessage("Ïðè çàïóñêå Sketchware Pro ïðîèçîøëà îøèáêà. " +
-                            "Âû õîòèòå ñîîáùèòü îá ýòîé îøèáêå â æóðíàëå, ÷òîáû ìû ìîãëè åå èñïðàâèòü? " +
-                            "Íèêàêàÿ ëè÷íàÿ èíôîðìàöèÿ íå áóäåò âêëþ÷åíà.")
-                    .setPositiveButton("Êîïèðîâàíèå", null)
-                    .setNegativeButton("Îòìåíà", (dialogInterface, which) -> finish())
-                    .setNeutralButton("Ïîêàçàòü îøèáêè", null) // null to set proper onClick listeners later without dismissing the AlertDialog
+                    .setMessage("ÐŸÑ€Ð¸ Ð·Ð°Ð¿ÑƒÑÐºÐµ Sketchware Pro Ð¿Ñ€Ð¾Ð¸Ð·Ð¾ÑˆÐ»Ð° Ð¾ÑˆÐ¸Ð±ÐºÐ°. " +
+                            "Ð’Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ ÑÐ¾Ð¾Ð±Ñ‰Ð¸Ñ‚ÑŒ Ð¾Ð± ÑÑ‚Ð¾Ð¹ Ð¾ÑˆÐ¸Ð±ÐºÐµ Ð² Ð¶ÑƒÑ€Ð½Ð°Ð»Ðµ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¼Ñ‹ Ð¼Ð¾Ð³Ð»Ð¸ ÐµÐµ Ð¸ÑÐ¿Ñ€Ð°Ð²Ð¸Ñ‚ÑŒ? " +
+                            "ÐÐ¸ÐºÐ°ÐºÐ°Ñ Ð»Ð¸Ñ‡Ð½Ð°Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð½Ðµ Ð±ÑƒÐ´ÐµÑ‚ Ð²ÐºÐ»ÑŽÑ‡ÐµÐ½Ð°.")
+                    .setPositiveButton("ÐšÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ", null)
+                    .setNegativeButton("ÐžÑ‚Ð¼ÐµÐ½Ð°", (dialogInterface, which) -> finish())
+                    .setNeutralButton("ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ Ð¾ÑˆÐ¸Ð±ÐºÐ¸", null) // null to set proper onClick listeners later without dismissing the AlertDialog
                     .setCancelable(false)
                     .show();
 
@@ -58,7 +58,7 @@ public class CollectErrorActivity extends BaseAppCompatActivity {
                     info = getPackageManager().getPackageInfo(getPackageName(), 0);
                 } catch (PackageManager.NameNotFoundException e) {
                     messageView.setTextIsSelectable(true);
-                    messageView.setText("Ïî÷åìó-òî íå óäàëîñü ïîëó÷èòü èíôîðìàöèþ î ïàêåòå. Òðàññèðîâêà ñòåêà:\n" + Log.getStackTraceString(e));
+                    messageView.setText("ÐŸÐ¾Ñ‡ÐµÐ¼Ñƒ-Ñ‚Ð¾ Ð½Ðµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ð¿Ð°ÐºÐµÑ‚Ðµ. Ð¢Ñ€Ð°ÑÑÐ¸Ñ€Ð¾Ð²ÐºÐ° ÑÑ‚ÐµÐºÐ°:\n" + Log.getStackTraceString(e));
                     return;
                 }
 
@@ -75,7 +75,7 @@ public class CollectErrorActivity extends BaseAppCompatActivity {
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("error", deviceInfo + "\n\n```\n" + error + "\n```");
                 clipboard.setPrimaryClip(clip);
-                runOnUiThread(() -> SketchwareUtil.toast("Ñêîïèðîâàòü", Toast.LENGTH_LONG));
+                runOnUiThread(() -> SketchwareUtil.toast("Ð¡ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ", Toast.LENGTH_LONG));
             });
         }
     }

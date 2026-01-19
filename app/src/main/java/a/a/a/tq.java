@@ -131,7 +131,7 @@ public class tq {
         a.add(new QuizBean("Вы можете создать свой собственный валидатор для EditText, отредактировав событие \"onTextChanged\".", QuizBean.QUIZ_TRUE));
         a.add(new QuizBean("Вы можете программно изменить стиль виджетов, используя блоки.", QuizBean.QUIZ_TRUE));
         a.add(new QuizBean("Свойство \"Подсказка\" для EditText подсказывает пользователю, что должно быть принято в качестве входных данных.", QuizBean.QUIZ_TRUE));
-        a.add(new QuizBean("Параметр "НЕВИДИМЫЙ" для свойства видимости заставляет виджет исчезать, но все равно занимает место.", QuizBean.QUIZ_TRUE));
+        a.add(new QuizBean("Параметр \"НЕВИДИМЫЙ\" для свойства видимости заставляет виджет исчезать, но все равно занимает место.", QuizBean.QUIZ_TRUE));
         a.add(new QuizBean("В Sketchware можно создать ландшафтное приложение.", QuizBean.QUIZ_TRUE));
         a.add(new QuizBean("Звуковой файл можно бесконечно зацикливать.", QuizBean.QUIZ_TRUE));
         a.add(new QuizBean("Вы можете создавать алгоритмы с помощью блоков, например алгоритм, который перетасовывает колоду карт.", QuizBean.QUIZ_TRUE));
